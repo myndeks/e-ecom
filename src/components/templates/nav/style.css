@@ -1,0 +1,22 @@
+.nav_wrapper {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav_wrapper-items span {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.nav_wrapper-logo a {
+  color: var(--blue);
+}
+
+.nav_wrapper-items a {
+  color: var(--black);
+}

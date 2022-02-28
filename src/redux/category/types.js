@@ -1,0 +1,4 @@
+export const CHOOSE_CAT = 'CHOOSE_CAT';
+export const FETCH_CAT_REQUEST = 'FETCH_CAT_REQUEST';
+export const FETCH_CAT_SUCCES = 'FETCH_CAT_SUCCES';
+export const FETCH_CAT_FAILURE = 'FETCH_CAT_FAILURE';
