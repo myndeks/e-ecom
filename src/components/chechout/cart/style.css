@@ -1,0 +1,27 @@
+.checkout_cart_wrapper_items {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.checkout_cart_wrapper_items-img {
+  width: 200px;
+  margin-right: 30px;
+}
+
+.checkout_cart_wrapper_items-img img {
+  width: 100%;
+  height: auto;
+}
+
+.checkout_cart_wrapper_items-info {
+  text-align: left;
+  padding: 20px 0;
+}
+
+.checkout_cart_wrapper_items_checkout-btn {
+  background: var(--blue);
+  color: var(--white);
+  padding: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}

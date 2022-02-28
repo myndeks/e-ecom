@@ -26,8 +26,8 @@ function SingleProduct ( { productsData, cartItems, addtoCartFunction = () => {}
     }
   }
 
-  function addProductsToCart (id) {
-    addtoCartFunction(id)
+  function addProductsToCart (data, quantity) {
+    addtoCartFunction(data, quantity)
   }
 
   return (
@@ -42,8 +42,15 @@ function SingleProduct ( { productsData, cartItems, addtoCartFunction = () => {}
           <p>Price: {data.price}</p>
           <p>Quantity: {data.quatity}</p>
           <hr />
-        
-          <button className="signle_product_btn_add_to_cart" onClick={() => addProductsToCart(id)}> Add to cart </button>
+
+          <div className="signle_product_info_quantity">
+            <div className="signle_product_info_quantity_add" onClick={addQuantity}>+</div>
+            <div className="signle_product_info_quantity_count">{quantity}</div>
+            <div className="signle_product_info_quantity_minus" onClick={minusQuantity}>-</div>
+          </div>
+
+
+          <button className="signle_product_btn_add_to_cart" onClick={() => addProductsToCart(data, quantity)}> Add to cart </button>
 
         </div>
       </div>
@@ -60,7 +67,7 @@ function mapStateToProps ({ products, cart }) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    addtoCartFunction: (id) => dispatch(addtoCartFunction(id))
+    addtoCartFunction: (data, quantity) => dispatch(addtoCartFunction(data, quantity))
   };
 }
 

@@ -20,8 +20,8 @@ function Products ( { cartItems, productsData, fetchProcucts, choosedCat, addtoC
     fetchProcucts(choosedCat);
   },[choosedCat]);
 
-  function addProductsToCart (id) {
-    addtoCartFunction(id)
+  function addProductsToCart (item) {
+    addtoCartFunction(item)
   }
 
 
@@ -47,7 +47,7 @@ function Products ( { cartItems, productsData, fetchProcucts, choosedCat, addtoC
               </div>
 
               <div className="products-wrapper-products-item-buttons">
-                <button onClick={() => addProductsToCart(item.id)}> Add to cart </button>
+                <button onClick={() => addProductsToCart(item)}> Add to cart </button>
                 <div> <Link to={item.id}>View product</Link> </div>
               </div>
             </div>

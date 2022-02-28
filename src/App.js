@@ -7,7 +7,8 @@ import {
 
 import MainPage from './components/pages/main';
 import SignleProductPage from './components/pages/single_product_page';
-import AddToCart from './components/chechout/cart'
+import CheckoutPage from './components/pages/checkout_page'
+import CheckoutPageStepOne from './components/pages/checkout_page_step_one'
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage/>}/>
         <Route path="/:id" element={<SignleProductPage/>}/>
-        <Route path="/chechout" element={<AddToCart/>}/>
+        <Route path="/chechout" element={<CheckoutPage/>}/>
+        <Route path="/checkout/step1" element={<CheckoutPageStepOne/>}/>
       </Routes>
     </div>
   );

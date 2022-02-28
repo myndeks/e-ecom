@@ -2,6 +2,9 @@ import './style.css';
 import { Link } from 'react-router-dom'
 import { connect } from "react-redux";
 import cart from '../../../redux/cart';
+import CartImg from './shopping-cart.png';
+import WishlistImg from './wishlist.png';
+
 
 function Nav ( { cartItems } ) {
   return (
@@ -13,7 +16,9 @@ function Nav ( { cartItems } ) {
         <span><Link to="/">About us</Link></span>
         <span><Link to="/">Contacts</Link></span>
 
-        <span><Link to="/chechout">Cart Items ({cartItems.length})</Link></span>
+        <span className="shopping-cart_img"><Link to="/chechout"><img src={CartImg} alt="shopping cart"/></Link>({cartItems.length})</span>
+        <span className="shopping-cart_img"><Link to="/chechout"><img src={WishlistImg} alt="wishlistImg"/></Link>({cartItems.length})</span>
+
       </div>
     </div>
   );

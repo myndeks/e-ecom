@@ -1,8 +1,9 @@
 import * as types from './types';
 
-export const addtoCartFunction = (id) => {
+export const addtoCartFunction = (item, quantity) => {
   return {
     type: types.ADD_TO_CART,
-    id: id
+    item: item,
+    quantity: quantity
   }
 }

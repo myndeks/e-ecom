@@ -8,6 +8,11 @@
   margin-bottom: 10px;
 }
 
+.nav_wrapper-items {
+  display: flex;
+  align-items: center;
+}
+
 .nav_wrapper-items span {
   padding-right: 10px;
   cursor: pointer;
@@ -19,4 +24,14 @@
 
 .nav_wrapper-items a {
   color: var(--black);
+}
+
+.shopping-cart_img {
+  display: flex;
+  align-items: center;
+}
+
+
+.shopping-cart_img img {
+  width: 22px;
 }
