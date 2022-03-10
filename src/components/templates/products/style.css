@@ -14,12 +14,10 @@
 
 .products-wrapper-products-item-img {
   width: 100%;
-  height: 200px;
 }
 
 .products-wrapper-products-item-img img {
   width: 100%;
-  height: 200px;
 }
 
 .products-wrapper-products-item-info {
@@ -53,4 +51,12 @@
 
 .products-wrapper {
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .products-wrapper-products-item {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
 }

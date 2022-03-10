@@ -7,3 +7,10 @@ export const addtoCartFunction = (item, quantity) => {
     quantity: quantity
   }
 }
+
+export const removeoCartFunction = (itemId) => {
+  return {
+    type: types.REMOVE_TO_CART,
+    itemId: itemId,
+  }
+}

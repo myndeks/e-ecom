@@ -40,8 +40,10 @@ function SingleProduct ( { productsData, cartItems, addtoCartFunction = () => {}
         <div className="signle_product_info">
           <h1>{data.title}</h1>
           <p>Price: {data.price}</p>
-          <p>Quantity: {data.quatity}</p>
           <hr />
+          <p>
+          {data.description}
+          </p>
 
           <div className="signle_product_info_quantity">
             <div className="signle_product_info_quantity_add" onClick={addQuantity}>+</div>

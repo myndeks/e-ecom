@@ -1,6 +1,7 @@
 .checkout_cart_wrapper_items {
   display: flex;
   justify-content: flex-start;
+  position: relative;
 }
 
 .checkout_cart_wrapper_items-img {
@@ -23,5 +24,12 @@
   color: var(--white);
   padding: 20px;
   margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.checkout_cart_wrapper_items-remove {
+  position: absolute;
+  top: 20px;
+  right: 30px;;
   cursor: pointer;
 }

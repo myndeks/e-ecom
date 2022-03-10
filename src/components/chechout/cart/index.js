@@ -5,9 +5,14 @@ import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import cart from '../../../redux/cart';
 import products from '../../../redux/products';
+import { removeoCartFunction } from '../../../redux/cart/actions';
 
 
-function AddToCart ( { cartItems, productsData } ) {
+function AddToCart ( { cartItems, productsData, removeoCartFunction = () => {} } ) {
+
+  function removeProductsToCart (itemId) {
+    removeoCartFunction(itemId)
+  }
 
   console.log('these are cart imtes', cartItems);
 
@@ -29,6 +34,8 @@ function AddToCart ( { cartItems, productsData } ) {
                   Choosed quantity: {item.choosedQuantity}
                 </div>
               </div>
+
+              <div onClick={() => removeProductsToCart(item.id)} className="checkout_cart_wrapper_items-remove">Remove</div>
             </div>
           );
         })}
@@ -46,8 +53,13 @@ function mapStateToProps ({ cart, products }) {
   return {
     cartItems: cart.addToCart,
     productsData: products.data,
-
   }
 }
 
-export default connect(mapStateToProps)(AddToCart);
+function mapDispatchToProps (dispatch) {
+  return {
+    removeoCartFunction: (itemId) => dispatch(removeoCartFunction(itemId))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddToCart);

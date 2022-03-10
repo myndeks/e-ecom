@@ -26,7 +26,7 @@ function Products ( { cartItems, productsData, fetchProcucts, choosedCat, addtoC
 
 
   return (
-    <div className="products-wrapper wrapper">
+    <div className="products-wrapper wrapper  wrapper-m">
       <h1 className=""> Products </h1>
 
       <Categories />
@@ -47,7 +47,6 @@ function Products ( { cartItems, productsData, fetchProcucts, choosedCat, addtoC
               </div>
 
               <div className="products-wrapper-products-item-buttons">
-                <button onClick={() => addProductsToCart(item)}> Add to cart </button>
                 <div> <Link to={item.id}>View product</Link> </div>
               </div>
             </div>
